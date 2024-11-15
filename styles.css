@@ -1,0 +1,274 @@
+@font-face {
+    font-family: 'Hilds';
+    src: url('./ressources/fonts/Hilds___.ttf') format('truetype');
+}
+
+/* body*/
+body {
+    background-color: #47ABA9;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+.header {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    padding-top: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #47ABA9;
+}
+
+.leftCloud, .rightCloud {
+    position: relative;
+    top: -15%;
+    width: 30%;
+    max-width: 300px;
+    display: flex;
+    align-items: center;
+}
+
+.leftCloud {
+    justify-content: flex-start;
+    left: -1%;
+}
+
+.rightCloud {
+    justify-content: flex-end;
+    right: -1%;
+}
+
+.cloud {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    z-index: 0;
+}
+
+.character {
+    position: absolute;
+    width: 250px;
+    height: auto;
+}
+
+.leftCloud .character {
+    left: -10%;
+    top: -10%;
+}
+
+.rightCloud .character {
+    right: -10%;
+    top: -10%;
+}
+
+/* title */
+.title {
+    font-family: Hilds, Arial, sans-serif;
+    font-size: 11rem;
+    color: #E1CF7D;
+    text-shadow: 
+      3px 3px 2px rgba(182, 138, 91, 1),
+      4px 4px 3px rgba(238, 223, 129, 1);
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    top: -15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+
+/* Fade-in effect for title */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Sections */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 20px;
+    margin-top: 0%;
+    background-color: #47ABA9;
+}
+
+.section {
+    max-width: 1200px;
+    width: 100%;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    margin: 40px 0;
+    
+}
+
+.section h2 {
+    font-family: Hilds, Arial, sans-serif;
+    color: #EEDFA9;
+    text-shadow: 2px 2px 1px rgba(89, 126, 127, 0.8);
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+.framed-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: rgba(94, 114, 85, 0.7);
+    border-radius: 10px;
+    flex: 1;
+}
+
+.frame-content {
+    max-width: 600px;
+}
+
+/* Slide-in effect for sections */
+.section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.slide-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* The website */
+.grimoire {
+    width: 700px;
+    height: auto;
+    margin-right: 20px;
+}
+
+/* To be continue ... */
+.map {
+    width: 700px;
+    height: auto;
+    margin-left: 20px;
+}
+
+/* Meet the dev*/
+.photo {
+    width: 350px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.connect-container {
+    justify-content: center;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .dev-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dev-photo {
+        margin-bottom: 20px;
+    }
+}
+
+.connect-container {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.connect-text {
+    margin-right: 20px;
+}
+
+.social-links {
+    display: flex;
+}
+
+.social-logo {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    background-color: white;
+    padding: 5px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.social-logo:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .section {
+        padding: 20px;
+    }
+
+    .section h2 {
+        font-size: 2rem;
+    }
+
+    .section p {
+        font-size: 1rem;
+    }
+}
+
+/* Footer */
+.footer {
+    background-color: #47ABA9;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 200px;
+}
+
+.footer-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cloud-container {
+    position: relative;
+    display: inline-block;
+}
+
+.footer-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #333;
+    width: 80%;
+    font-size: 20px;
+}
